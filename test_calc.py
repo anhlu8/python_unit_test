@@ -21,8 +21,9 @@ class TestCalc(unittest.TestCase):
         self.assertEqual(calc.divide(-2,-2),1)
         self.assertEqual(calc.divide(5,2),2.5)
         
-        self.assertRaises(ValueError, calc.divide, 10,0) #assertRaises() expects the exception, the function we want to test -- no (), and arguments
-
+        # self.assertRaises(ValueError, calc.divide, 10,0) #assertRaises() expects the exception, the function we want to test -- no (), and arguments
+        with self.assertRaises(ValueError): #this is context manager
+            calc.divide(5,0)
     
 if __name__ == '__main__':
     unittest.main() # Run `python test_calc.py` 
