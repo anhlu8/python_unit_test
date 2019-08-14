@@ -1,4 +1,13 @@
 class Employee:
+    """Create Employee Class
+    
+    Argumenets:
+        [first] -- [String, first name]
+        [last] -- [String, last name]
+        [pay] -- [Integer, salary]
+    Returns:
+        [type] -- [description]
+    """
     raise_amt = 1.05
     
     def __init__(self, first, last, pay):
